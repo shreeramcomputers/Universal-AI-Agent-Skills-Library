@@ -6,7 +6,7 @@ A versioned collection of portable Agent Skills. A Skill is an instruction packa
 ## Start here
 1. Browse [CATALOG.json](../CATALOG.json) and [Skills Directory](../skills/README.md).
 2. Select the smallest set of Skills that covers the task.
-3. Read the complete selected `SKILL.md`, then load [GLOBAL_RULES.md](../GLOBAL_RULES.md), relevant sections of [SKILL_RULES.md](../SKILL_RULES.md), and the confirmed project configuration.
+3. Read the complete selected `SKILL.md`, then load [GLOBAL_RULES.md](../GLOBAL_RULES.md), relevant sections of [SKILL_RULES.md](../SKILL_RULES.md), and the user's confirmed `AI_CONTEXT.md` (if available). If it is missing, continue with available evidence and ask one question at a time only when a missing detail blocks the task.
 4. Follow the relevant client installation guide in [INSTALLATION.md](../INSTALLATION.md).
 5. Test on a harmless representative task before relying on the Skill.
 
