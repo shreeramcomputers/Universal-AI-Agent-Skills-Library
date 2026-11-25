@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "release-artifacts/part-*.b64"
+      - "release-artifacts/part-*"
       - ".github/workflows/publish-library.yml"
 
 permissions:
@@ -26,7 +26,7 @@ jobs:
         run: |
           set -euo pipefail
           shopt -s nullglob
-          parts=(release-artifacts/part-*.b64)
+          parts=(release-artifacts/part-*)
           if [ "${#parts[@]}" -eq 0 ]; then
             echo "archive_present=false" >> "$GITHUB_OUTPUT"
             echo "No staged release parts remain; nothing to install."
@@ -35,8 +35,7 @@ jobs:
           echo "archive_present=true" >> "$GITHUB_OUTPUT"
 
           mkdir -p "${RUNNER_TEMP}/skills-release"
-          cat "${parts[@]}" > "${RUNNER_TEMP}/library.tar.xz.b64"
-          base64 --decode "${RUNNER_TEMP}/library.tar.xz.b64" > "${RUNNER_TEMP}/library.tar.xz"
+          cat "${parts[@]}" > "${RUNNER_TEMP}/library.tar.xz"
 
           echo "50918f00b81d9d9c629c120cd5152d9500aec099c242ea4f3497464eb4a0812c  ${RUNNER_TEMP}/library.tar.xz" | sha256sum --check -
           tar -xJf "${RUNNER_TEMP}/library.tar.xz" -C "${RUNNER_TEMP}/skills-release"
