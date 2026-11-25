@@ -48,7 +48,7 @@ python3 Universal-AI-Agent-Skills-Library/scripts/install_skill.py \
   --all --destination .agents/skills
 ```
 
-The installer copies the selected skill folders and places `GLOBAL_RULES.md`, `SKILL_RULES.md`, and `PROJECT_CONFIG.md` at the correct shared location. It refuses to overwrite existing files unless `--force` is provided. Review existing files before using that option.
+The installer copies the selected skill folders and places `GLOBAL_RULES.md`, `SKILL_RULES.md`, and `AI_CONTEXT.md` at the correct shared location. It refuses to overwrite existing files unless `--force` is provided. Review existing files before using that option.
 
 ### Install using a Skills-compatible CLI
 
@@ -125,7 +125,7 @@ Every skill links to these files:
 
 - [GLOBAL_RULES.md](GLOBAL_RULES.md) — truth, evidence, communication, privacy, safety, engineering, and completion claims.
 - [SKILL_RULES.md](SKILL_RULES.md) — domain-specific rules and the skill routing matrix.
-- [PROJECT_CONFIG.md](PROJECT_CONFIG.md) — neutral per-user/per-project settings. Unknown values must remain unconfigured until verified.
+- [AI_CONTEXT.md](AI_CONTEXT.md) — neutral per-user/per-project settings. Unknown values must remain unconfigured until verified.
 
 Preserve the shared files alongside the skills. Relative links do not guarantee automatic loading in every AI client.
 
@@ -177,4 +177,4 @@ Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CON
 
 ## Project status
 
-Version 3.0.0 is the last stable baseline. The v3.1.0 documentation and context-steward upgrade is under review on a separate branch; see the pull request and validation evidence before using it as a release. Static validation is automated. Cross-platform runtime activation is not claimed unless explicitly tested and documented.
+Version 4.0.0 is being prepared on a review branch. See the pull request and CI evidence before treating it as a release. Static validation is automated. Cross-platform runtime activation is not claimed unless explicitly tested and documented.
