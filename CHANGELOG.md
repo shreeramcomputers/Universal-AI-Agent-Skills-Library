@@ -1,4 +1,4 @@
-# Changelog
+# Changelog\n\n## 3.1.0 — documentation and context workflow upgrade (under review)\n\n### Added\n- English and Hinglish repository user guides and per-Skill discovery/usage guides for all catalogue Skills.\n- Direct AI-to-GitHub connection guide covering read-only access, scoped connector access, MCP/API bridge safety, version pinning, and optional PHP adapter architecture.\n- Personal Assistant Context Steward Skill and transparent context export/review/import workflow.\n- Conditional website/software/application page standard with shared legal-content governance.\n\n### Safety and compatibility\n- Explicitly documents that hidden AI memory and provider databases are not automatically accessible or writable.\n- config.php may be the only user-edited configuration file, but must not contain secrets; secure credentials stay server-side.\n- No duplicate Skills added; one distinct personal-context stewardship capability added after checking existing context and memory Skills.
 
 All notable library changes are documented here.
 
