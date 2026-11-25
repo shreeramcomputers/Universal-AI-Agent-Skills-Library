@@ -28,7 +28,7 @@ A request is ambiguous, spans multiple components, changes public behavior, touc
 ## Workflow
 1. Identify the user problem, intended outcome, actors, operating context, and measurable success.
 2. Inspect existing code, documentation, constraints, and current workflows before assuming a greenfield design.
-3. Ask one focused question at a time only when an unresolved decision materially changes the solution. Otherwise record a reversible assumption.
+3. Ask one focused question per turn when an unresolved user-owned decision materially changes the solution; wait for the answer before asking another. Do not convert an unknown into an assumption. If it is non-blocking, record it as UNRESOLVED and continue only with work that does not depend on it.
 4. Define scope, non-goals, user journeys, functional requirements, quality attributes, data classification, permissions, integrations, and failure behavior.
 5. Specify interface and API contracts, state transitions, validation, error semantics, audit events, and compatibility expectations.
 6. Record architecture choices, alternatives, consequences, migration needs, operational needs, and open questions.
