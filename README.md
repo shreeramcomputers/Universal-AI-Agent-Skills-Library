@@ -1,67 +1,170 @@
-# Universal AI Agent Skills Library v2.2.0
+# Universal AI Agent Skills Library
 
-A portable library of **31 reusable, general-purpose AI agent skills** for individuals, developers, teams, and organizations. The library includes software engineering, security, project planning, data governance, content, and workflow skills.
+**A practical, open collection of portable Agent Skills for real work.**
+
+[![Agent Skills format](https://img.shields.io/badge/format-Agent%20Skills-blue)](https://agentskills.io/)
+[![Skills](https://img.shields.io/badge/skills-44-brightgreen)](skills/)
+[![Validation](https://github.com/shreeramcomputers/Universal-AI-Agent-Skills-Library/actions/workflows/validate-skills.yml/badge.svg)](https://github.com/shreeramcomputers/Universal-AI-Agent-Skills-Library/actions/workflows/validate-skills.yml)
+[![MIT code](https://img.shields.io/badge/code-MIT-green)](LICENSE)
+[![CC BY 4.0 content](https://img.shields.io/badge/skill%20content-CC%20BY%204.0-blue)](LICENSE-CONTENT.md)
+
+A vendor-neutral library of **44 reusable AI agent skills** for individuals, developers, teams, agencies, and organizations. It covers software engineering, web development, security, data, finance, product discovery, research, operations, and content workflows.
+
+The library uses the open [Agent Skills format](https://agentskills.io/): each skill is a folder containing a `SKILL.md` with YAML frontmatter and clear task instructions. Skills are modular; use only the ones relevant to the job.
+
+## Quick start
+
+### Browse before installing
+
+```bash
+npx skills add shreeramcomputers/Universal-AI-Agent-Skills-Library --list
+```
+
+### Install one skill with its shared rules (recommended)
+
+Clone the repository, then use the included dependency-free installer from your project directory:
+
+```bash
+git clone --depth 1 https://github.com/shreeramcomputers/Universal-AI-Agent-Skills-Library.git
+python3 Universal-AI-Agent-Skills-Library/scripts/install_skill.py \
+  --skill php-shared-hosting-engineering \
+  --destination .agents/skills
+```
+
+Install more than one skill by repeating `--skill`. Install the complete collection with:
+
+```bash
+python3 Universal-AI-Agent-Skills-Library/scripts/install_skill.py \
+  --all --destination .agents/skills
+```
+
+The installer copies the selected skill folders and places `GLOBAL_RULES.md`, `SKILL_RULES.md`, and `PROJECT_CONFIG.md` at the correct shared location. It refuses to overwrite existing files unless `--force` is provided. Review existing files before using that option.
+
+### Install using a Skills-compatible CLI
+
+```bash
+npx skills add shreeramcomputers/Universal-AI-Agent-Skills-Library \
+  --skill php-shared-hosting-engineering
+```
+
+**Important:** some CLI installers copy only the selected skill folder, not repository-root shared files. In that case, copy the three shared files into the location expected by the installed relative links, or use the included installer. Client behavior varies; verify the installed paths.
 
 ## What is included
 
-- 31 self-contained skill folders, each with a `SKILL.md` and YAML frontmatter.
-- `GLOBAL_RULES.md` — cross-skill truth, evidence, communication, privacy, safety, engineering, and action rules.
-- `SKILL_RULES.md` — domain-specific requirements, including the mandatory unified website UI/UX and security architecture.
-- `PROJECT_CONFIG.md` — neutral configuration template. Empty or `VERIFY` values are unknown, not defaults.
-- `CATALOG.json`, `CHANGELOG.md`, `MIGRATION.md`, and `VALIDATION_REPORT.md`.
+- **44 skills** with focused triggers, workflows, guardrails, and expected outputs.
+- **Three shared rules files** used across the collection.
+- A neutral project configuration template; unfilled values are unknown, not defaults.
+- Installation and migration guidance.
+- A zero-dependency Python validator and unit tests.
+- GitHub Actions validation on pull requests and pushes.
+- Contribution, security, support, code-of-conduct, changelog, and roadmap documents.
 
-## Skill index
+## Skill catalogue
 
-| Skill | Purpose |
+| Skill | What it helps with |
 |---|---|
-| `memory-governance-and-source-control` | Organize project knowledge, memories, documents, decisions, and source conflicts for individuals or teams. Use when an AI agent must retrieve, update, verify, or hand over project context. |
-| `php-shared-hosting-engineering` | Build, audit, secure, and optimize PHP applications on shared or restricted hosting without assuming root access or a specific hosting provider. |
-| `secure-rest-api-engineering` | Design, implement, test, and review secure REST/JSON APIs with clear contracts, authentication, authorization, abuse controls, and reliable error handling. |
-| `mariadb-database-engineering` | Design, inspect, migrate, optimize, and validate MariaDB/MySQL schemas, queries, transactions, and data workflows. |
-| `payment-and-wallet-ledger-workflow` | Design and review payment, wallet, refund, cashback, settlement, and ledger workflows with reliable evidence and reconciliation. |
-| `authentication-and-session-security` | Design, implement, and audit account authentication, MFA, OTP, recovery, sessions, device trust, and authorization. |
-| `qr-code-api-engineering` | Build, maintain, and secure QR/barcode generation and decoding APIs with format validation, resource limits, and backward compatibility. |
-| `consent-based-location-sharing` | Design and secure user-consented location sharing, GPS ingestion, session controls, map display, and location-data retention. |
-| `android-extension-engineering` | Build, audit, upgrade, and maintain Android extensions/components for supported builders such as Niotron or App Inventor. |
-| `android-platform-policy-compliance` | Review Android platform behavior, API compatibility, permissions, privacy, background limits, and app-store distribution requirements. |
-| `financial-data-governance` | Govern financial records, credit data, statements, calculations, account matching, AI access, and consent across personal or business finance systems. |
-| `website-seo-and-local-search` | Improve websites, technical SEO, local search presence, structured data, accessibility, and business listings using accurate evidence. |
-| `youtube-content-and-trust-safety` | Create and audit YouTube scripts, titles, descriptions, thumbnails, tags, and educational content with factual accuracy and platform-policy awareness. |
-| `privacy-first-browser-tools` | Design browser-based tools that minimize data collection, protect files and user input, and clearly disclose network and storage behavior. |
-| `upi-payment-integrity` | Design and review India UPI intent/QR payment journeys with secure server-side verification, idempotency, and dispute reconciliation. |
-| `mcp-and-api-integration` | Design and integrate APIs with Model Context Protocol (MCP) servers, tools, resources, and AI clients using least privilege and safe action approval. |
-| `client-website-delivery` | Plan, build, audit, and hand over websites for multiple clients while protecting identity, data separation, approvals, and deployment integrity. |
-| `digital-service-center-operations` | Improve customer-facing digital service centers through accurate SOPs, document handling, queue management, printing, payments, and privacy controls. |
-| `agricultural-marketplace-planning` | Plan digital marketplaces that connect farmers, food producers, buyers, logistics providers, and service partners with clear roles and transaction controls. |
-| `contract-first-project-planning` | Convert complex requests into scoped, testable plans with dependencies, acceptance criteria, risks, and verified completion status. |
-| `universal-skill-creator` | Create, review, improve, validate, and package portable AI Agent Skills for individuals, teams, and organizations. Use when a workflow must become a reusable SKILL.md or an existing skill needs upgrading. |
-| `context-builder` | Retrieve only task-relevant project context under a defined context and privacy budget. |
-| `github-delivery` | Prepare safe Git commits, pull requests, repository documentation, CI, releases, and deployment workflows. |
-| `memory-governance` | Govern durable AI memory creation, review, approval, versioning, expiry, retrieval, and deletion. |
-| `php-shared-hosting` | Design, audit, secure, and deploy PHP applications on shared or restricted hosting. |
-| `project-planning` | Plan products and technical work in phases with scope, evidence, risk controls, and measurable acceptance criteria. |
-| `project-reverse-engineering` | Understand and safely improve existing software systems before changing or replacing them. |
-| `repository-first-memory` | Use authorized project repositories as canonical context without leaking data across project scopes. |
-| `secure-rest-api` | Design secure REST APIs with authentication, authorization, validation, abuse controls, and safe operations. |
-| `scoped-memory-governance` | Curate durable project memory with explicit scope, provenance, approval, versions, and privacy boundaries. |
-| `security-audit` | Audit explicitly authorized software and deployments using evidence-based defensive security methods. |
+| `accessibility-engineering` | Accessibility audits, semantic UI, keyboard and screen-reader workflows |
+| `agricultural-marketplace-planning` | Marketplace roles, inventory, fulfillment, disputes, and settlement |
+| `android-extension-engineering` | Android extension/component engineering and compatibility |
+| `android-platform-policy-compliance` | Android API, permissions, privacy, and distribution review |
+| `authentication-and-session-security` | Authentication, MFA, OTP, session, and authorization security |
+| `browser-testing-and-automation` | Reliable browser automation and end-to-end testing |
+| `ci-cd-and-release-engineering` | CI pipelines, release artifacts, permissions, deployment, and rollback |
+| `client-website-delivery` | Multi-client website delivery and handover |
+| `cloud-architecture-and-cost-optimization` | Cloud architecture, reliability, cost, and exit planning |
+| `code-review-and-quality` | Correctness, security, maintainability, and release reviews |
+| `consent-based-location-sharing` | Consent-based GPS sharing and location privacy |
+| `context-builder` | Task-relevant context retrieval under privacy and size limits |
+| `contract-first-project-planning` | Scoped plans, acceptance criteria, dependencies, and approvals |
+| `data-analysis-and-visualization` | Reproducible data analysis and accurate visualization |
+| `dependency-and-supply-chain-security` | Dependency, license, provenance, and build-supply-chain review |
+| `digital-service-center-operations` | Customer-facing service workflows, documents, payments, and privacy |
+| `documentation-and-architecture-decisions` | Technical documentation, architecture decisions, and runbooks |
+| `financial-data-governance` | Financial records, sensitive data, consent, and reconciliation |
+| `frontend-ui-engineering` | Consistent design systems, responsive layouts, and frontend architecture |
+| `github-delivery` | Safe repository changes, pull requests, CI, and releases |
+| `mariadb-database-engineering` | Relational schemas, migrations, queries, and integrity |
+| `mcp-and-api-integration` | MCP servers, tool schemas, API integrations, and safe permissions |
+| `memory-governance-and-source-control` | Versioned knowledge, decisions, provenance, and source conflicts |
+| `observability-and-incident-response` | Logs, metrics, traces, alerts, incidents, and recovery |
+| `payment-and-wallet-ledger-workflow` | Payment, wallet, refund, settlement, and ledger integrity |
+| `performance-engineering` | Measurement-led latency, throughput, and resource optimization |
+| `php-shared-hosting-engineering` | Secure PHP engineering for shared/restricted hosting |
+| `privacy-first-browser-tools` | Browser tools with clear storage, network, and privacy behavior |
+| `product-discovery-and-validation` | User problem discovery and evidence-led product experiments |
+| `qr-code-api-engineering` | QR/barcode APIs, validation, decoding, and resource limits |
+| `repository-first-memory` | Using authorized project repositories as canonical context |
+| `scoped-memory-governance` | Project-scoped memory, approvals, versions, and privacy boundaries |
+| `secure-rest-api-engineering` | Secure REST/JSON contracts, authorization, validation, and abuse controls |
+| `security-audit` | Authorized defensive security reviews and evidence-based findings |
+| `spec-driven-development` | Approved specifications and observable acceptance criteria |
+| `systematic-debugging` | Reproduction, root-cause analysis, narrow fixes, and regression proof |
+| `technical-research-and-source-verification` | Current primary-source research and claim-to-source traceability |
+| `test-driven-development` | Red-green-refactor implementation and regression testing |
+| `universal-skill-creator` | Creating, upgrading, reviewing, and validating portable skills |
+| `upi-payment-integrity` | UPI intent/QR integrity and server-side payment verification |
+| `website-seo-and-local-search` | Technical SEO, local search, structured data, and evidence-based listings |
+| `workflow-automation-and-process-design` | Safe, observable, approval-aware workflow automation |
+| `youtube-content-and-trust-safety` | Accurate YouTube content and platform/trust review |
 
-## Mandatory shared files
+The complete machine-readable catalogue is [CATALOG.json](CATALOG.json). The routing rules are in [SKILL_RULES.md](SKILL_RULES.md).
 
-Every skill explicitly links to all three shared files. Before using a skill, load `GLOBAL_RULES.md`, the relevant `SKILL_RULES.md` sections, and the active project's confirmed `PROJECT_CONFIG.md`. Preserve the package directory structure. Some agent clients do not follow Markdown links automatically; configure explicit loading or copy the shared files into a supported references location.
+## Shared rules
 
-## Website and web-application standard
+Every skill links to these files:
 
-For every website, web app, admin panel, or browser tool, apply `SKILL_RULES.md` §1: one consistent UI/UX design system across the complete product; reusable common header, footer, navigation, and components; organized separate CSS and JavaScript; clear frontend/backend separation; full responsive behavior; and sensitive configuration, credentials, logs, backups, and private data outside the actual web document root wherever the host allows. Verify the real document root and test direct URL access before claiming files are protected.
+- [GLOBAL_RULES.md](GLOBAL_RULES.md) — truth, evidence, communication, privacy, safety, engineering, and completion claims.
+- [SKILL_RULES.md](SKILL_RULES.md) — domain-specific rules and the skill routing matrix.
+- [PROJECT_CONFIG.md](PROJECT_CONFIG.md) — neutral per-user/per-project settings. Unknown values must remain unconfigured until verified.
+
+Preserve the shared files alongside the skills. Relative links do not guarantee automatic loading in every AI client.
+
+## Mandatory website and web-tool standard
+
+Every website, web app, admin panel, customer portal, browser-based tool, and web UI must be treated as one coherent product:
+
+- One consistent UI/UX design system across the complete tool.
+- Reusable common header, footer, navigation, page shell, and shared components.
+- Organized, separate CSS and JavaScript assets/modules.
+- Clear frontend/backend boundary; secrets and trusted business logic remain server-side.
+- Fully responsive mobile, tablet, laptop, and desktop layouts.
+- Sensitive files and data—including environment files, credentials, private keys, logs, backups, private uploads, and customer data—outside the actual document root wherever the host permits.
+- Shared server-side code outside the public document root where possible.
+- Direct URL tests for sensitive paths before claiming that they are protected.
+
+See [SKILL_RULES.md §1](SKILL_RULES.md) for the full standard.
+
+## Quality and validation
+
+Run the validator and tests before submitting a change:
+
+```bash
+python3 scripts/validate_skills.py
+python3 -m unittest discover -s tests -v
+```
+
+The validator checks names, frontmatter limits, unique skill folders, shared-file links, local links, catalogue consistency, routing-matrix coverage, and known private-data/secret patterns. It is a static safety net, not a full YAML parser, security audit, or runtime test.
 
 ## Portability and limitations
 
-Each skill is instruction content, not an executable program. Skill discovery paths, tool availability, and references behavior vary by AI client. A skill does not grant permissions, install tools, train a model, or guarantee identical behavior across providers.
+Skills are instruction packages, not executable programs or permission grants. Tool access, activation, references, and UI differ by AI client. A skill may need client-specific installation or explicit file loading. Runtime compatibility and real behavior must be tested in the target environment.
 
-## License status
+## Research basis
 
-No license is included. Public visibility does not automatically grant permission to reuse, modify, or redistribute this content. A license should be added only after the rights holder selects one.
+The collection's structure and quality practices were informed by public documentation and examples from the Agent Skills specification and well-known skill collections, including [agentskills/agentskills](https://github.com/agentskills/agentskills), [anthropics/skills](https://github.com/anthropics/skills), [obra/superpowers](https://github.com/obra/superpowers), [mattpocock/skills](https://github.com/mattpocock/skills), [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills), [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills), and [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill).
 
-## Validation
+These are independent projects. This library does not claim affiliation or endorsement. Their skill files were not copied into this repository; the references were used to study public structure, workflow, testing, and quality practices.
 
-Static checks cover all skill names, frontmatter, shared-file links, catalog paths, package layout, and known private identifiers. Runtime behavior must still be tested in each target AI platform. See `VALIDATION_REPORT.md` for exact scope and limitations.
+## Licensing
+
+- Skill files and documentation: **CC BY 4.0**. Attribution and change-notice conditions apply.
+- Scripts, tests, and workflow code: **MIT**.
+- See [LICENSE](LICENSE), [LICENSE-CODE](LICENSE-CODE), and [LICENSE-CONTENT.md](LICENSE-CONTENT.md) for exact scope. Check third-party asset licenses separately.
+
+## Contributing
+
+Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), and [SECURITY.md](SECURITY.md) before opening a pull request.
+
+## Project status
+
+Version 3.0.0 is a major consolidation and expansion. Static validation is automated. Cross-platform runtime activation is not claimed unless explicitly tested and documented.

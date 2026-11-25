@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support and usage questions
+    url: https://github.com/shreeramcomputers/Universal-AI-Agent-Skills-Library/blob/main/SUPPORT.md
+    about: Read support guidance before opening a general question.
+  - name: Report a security vulnerability privately
+    url: https://github.com/shreeramcomputers/Universal-AI-Agent-Skills-Library/security/advisories/new
+    about: Do not publish exploitable security details in a public issue.
