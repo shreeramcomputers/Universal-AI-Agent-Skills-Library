@@ -1,0 +1,32 @@
+name: Validate Agent Skills Library
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: skill-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Static validation and unit tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - name: Show Python version
+        run: python3 --version
+
+      - name: Validate names, links, catalogue, routing, and privacy patterns
+        run: python3 scripts/validate_skills.py
+
+      - name: Run validator unit tests
+        run: python3 -m unittest discover -s tests -v

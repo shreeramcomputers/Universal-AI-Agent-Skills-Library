@@ -1,0 +1,78 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.local
+*.secret
+secrets/
+private/
+credentials/
+config/private*
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+
+# Local customer/production data and backups
+customer-data/
+user-data/
+private-uploads/
+local-uploads/
+backups/
+backup/
+dumps/
+database-dumps/
+*.sql.gz
+*.dump
+*.sqlite
+*.sqlite3
+*.db
+
+# Logs, temporary files, caches
+*.log
+logs/
+tmp/
+temp/
+.cache/
+.cache-*/
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.sublime-workspace
+*.code-workspace
+
+# Python tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+ENV/
+
+# JavaScript/build outputs
+node_modules/
+dist/
+build/
+coverage/
+.npm/
+.parcel-cache/
+
+# Browser/test artifacts
+.playwright/
+playwright-report/
+test-results/
+artifacts/
+scratch/

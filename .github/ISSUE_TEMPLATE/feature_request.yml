@@ -1,0 +1,32 @@
+name: Feature request
+description: Propose a distinct skill or improvement to an existing skill.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem or recurring task
+      description: Explain who needs this and what problem it solves.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Suggested scope and boundaries
+      description: Include examples, non-goals, safety risks, and why existing skills do not already cover it.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sources or evidence
+      description: Link to primary sources where current technical or policy facts are involved.
+    validations:
+      required: false
