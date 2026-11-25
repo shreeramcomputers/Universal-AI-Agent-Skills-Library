@@ -1,6 +1,6 @@
 {
   "library": "Universal AI Agent Skills Library",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "created": "2026-11-25",
   "format": "Agent Skills specification; portable instruction folders",
   "audience": "individuals, developers, teams, agencies, and organizations",
@@ -332,7 +332,7 @@
       "purpose": "Domain rules and a routing matrix for all 44 skills, including the website UI/UX and sensitive-file standard."
     },
     {
-      "name": "PROJECT_CONFIG.md",
+      "name": "AI_CONTEXT.md",
       "purpose": "Neutral project settings template; unfilled values remain unknown and do not grant approvals."
     },
     {
@@ -350,5 +350,7 @@
     "scripts_tests_and_workflows": "MIT",
     "details": "See LICENSE and LICENSE-CONTENT.md"
   },
-  "compatibility_note": "Agent Skills hosts vary in discovery, references handling, tool access, and execution. Static conformance does not prove identical runtime behavior across clients."
+  "compatibility_note": "Agent Skills hosts vary in discovery, references handling, tool access, and execution. Static conformance does not prove identical runtime behavior across clients.",
+  "updated": "2026-11-25",
+  "description": "Portable AI agent skills with a strict evidence-first, no-assumption, one-question-at-a-time interaction contract."
 }

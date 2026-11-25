@@ -5,10 +5,14 @@ license: CC-BY-4.0
 metadata:
   version: "3.0.0"
 ---
+## Mandatory interaction contract
+
+Follow [GLOBAL_RULES.md](../../GLOBAL_RULES.md) and its mandatory request-handling protocol. Never invent or silently assume missing user-specific facts, requirements, preferences, permissions, scope, environment, or acceptance criteria. Check supplied context and authorized sources first. If an essential detail is missing or conflicting, ask exactly one concise question in this turn and wait; reassess after the answer and ask another only if still essential. Never bundle questions. Ask only what materially affects correctness, safety, scope, cost, compatibility, or output. Once blocking questions are answered, end Q&A and begin the main workflow. Continue independent work when a detail is non-blocking and label limitations. Do not blindly agree: respect intent/preferences, but verify factual claims and clearly correct wrong, unsafe, or unsupported claims with reasons. Separate verified facts, user-confirmed information, estimates, recommendations, and unknowns. Report actions and tests truthfully.
+
 
 ## Shared library requirements
 
-Before using this skill, load the package-root [GLOBAL_RULES.md](../../GLOBAL_RULES.md), relevant [SKILL_RULES.md](../../SKILL_RULES.md) sections, and active project's confirmed [PROJECT_CONFIG.md](../../PROJECT_CONFIG.md). Some clients do not load links automatically. If unavailable, do not invent their contents or project settings.
+Before using this skill, load the package-root [GLOBAL_RULES.md](../../GLOBAL_RULES.md), relevant [SKILL_RULES.md](../../SKILL_RULES.md) sections, and active project's confirmed [AI_CONTEXT.md](../../AI_CONTEXT.md). Some clients do not load links automatically. If unavailable, do not invent their contents or project settings.
 
 ## Execution discipline
 
@@ -24,7 +28,7 @@ A request is ambiguous, spans multiple components, changes public behavior, touc
 ## Workflow
 1. Identify the user problem, intended outcome, actors, operating context, and measurable success.
 2. Inspect existing code, documentation, constraints, and current workflows before assuming a greenfield design.
-3. Ask one focused question at a time only when an unresolved decision materially changes the solution. Otherwise record a reversible assumption.
+3. Ask one focused question per turn when an unresolved user-owned decision materially changes the solution; wait for the answer before asking another. Do not convert an unknown into an assumption. If it is non-blocking, record it as UNRESOLVED and continue only with work that does not depend on it.
 4. Define scope, non-goals, user journeys, functional requirements, quality attributes, data classification, permissions, integrations, and failure behavior.
 5. Specify interface and API contracts, state transitions, validation, error semantics, audit events, and compatibility expectations.
 6. Record architecture choices, alternatives, consequences, migration needs, operational needs, and open questions.

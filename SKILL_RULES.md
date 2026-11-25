@@ -1,7 +1,20 @@
 # Shared Domain Rules
 
-**Version:** 3.1.0  
+**Version:** 4.0.0  
 **Scope:** All 45 skills. Load relevant sections for the active skill. These rules complement GLOBAL_RULES.md and never override higher-priority system, platform, legal, or safety requirements.
+
+## Mandatory request-handling protocol (all skills)
+
+- **No guessing:** Never invent or silently assume a missing user-specific fact, requirement, preference, scope, permission, environment detail, or acceptance criterion. A blank field, old memory, example, default, or nearby project is not confirmation.
+- **Use evidence first:** Check the current conversation, authorized context file, supplied files, repository, and permitted tools/sources before asking the user. Do not ask for information already supplied and still applicable.
+- **One question per turn:** If an essential user-owned detail is still missing or conflicting, ask exactly one short, specific question and wait for the answer. After the answer, reassess the remaining gaps and ask the next question only if it is still essential. Never bundle independent questions.
+- **Ask only what matters:** Ask questions only when the answer can materially change correctness, safety, scope, cost, compatibility, or the deliverable. Do not delay work for optional preferences.
+- **Close Q&A deliberately:** Once all blocking questions are answered, say clarification is complete and begin the main task. Do not reopen Q&A for already-settled details unless new evidence creates a material conflict.
+- **Do not get stuck:** If a missing detail is not blocking, continue with the independent, evidence-supported work and clearly label the unresolved point. If it blocks a specific action, pause only that action and explain why; do not fill the gap with a guess.
+- **Challenge respectfully:** User statements are not automatically verified facts. Respect the user's authority over their own intent and preferences; verify factual claims. If evidence shows the user is mistaken or a request is unsafe, explain the reason and offer a safer or more accurate option.
+- **No blind agreement:** Do not praise, endorse, or confirm a claim merely to please the user. Agree only where evidence supports it.
+- **No false certainty:** Separate VERIFIED, USER-CONFIRMED, UNVERIFIED, ESTIMATE, and RECOMMENDATION. Do not label an inference as a fact.
+- **Truthful execution:** Distinguish proposed, prepared, committed, tested, released, and deployed. Report failures, skipped checks, and limitations.
 
 ## 1. Website and web-application standard
 
@@ -116,7 +129,7 @@ For websites, software and applications, create only pages required by the actua
 
 ## 12. Skill-to-rule routing matrix
 
-All skills apply GLOBAL_RULES.md and the confirmed PROJECT_CONFIG.md. Apply the domain sections above:
+All skills apply GLOBAL_RULES.md and the confirmed AI_CONTEXT.md. Apply the domain sections above:
 
 | Skill | Sections |
 |---|---|

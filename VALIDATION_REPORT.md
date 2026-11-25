@@ -1,56 +1,34 @@
-# Validation Report — v3.0.0
+# Validation Report — v4.0.0
 
-## Release verification
+**Date:** 2026-11-25  
+**Branch:** `upgrade/v4.0.0-core-behavior-context`  
+**Pull request:** [#3](https://github.com/shreeramcomputers/Universal-AI-Agent-Skills-Library/pull/3)
 
-- Public repository: `shreeramcomputers/Universal-AI-Agent-Skills-Library`
-- Merged pull request: [#1](https://github.com/shreeramcomputers/Universal-AI-Agent-Skills-Library/pull/1)
-- Merge commit: `ee43e0d048d5ae9de1b5fbaff25fab5a339468b4`
-- CI run: [45559443981](https://github.com/shreeramcomputers/Universal-AI-Agent-Skills-Library/actions/runs/45559443981)
-- CI-tested PR head: `7d7a61f048f3ee9fb8beed3094b22c278c54dfef`
-- CI conclusion: **PASS**. The tested PR head and merged tree contain the same library files; merge commit metadata differs.
+## Scope
+- Applied the mandatory no-assumption, one-question-per-turn, truth-over-agreement contract to all 45 Skills.
+- Standardized one user-owned context template: `AI_CONTEXT.md`.
+- Removed the duplicate `PROJECT_CONFIG.md` file.
+- Updated the installer, validator, release packaging, catalogue, and user documentation.
 
-## Automated checks — PASS
+## Validation results
 
-- 44 skill folders found.
-- Unique skill names and folder/name match.
-- Required frontmatter fields, name format, description length, and 500-line soft ceiling checked.
-- All skills link to GLOBAL_RULES.md, SKILL_RULES.md, and PROJECT_CONFIG.md.
-- Relative Markdown links in skill files resolve.
-- CATALOG.json count, names, and file paths match the skill folders.
-- Every skill appears in the SKILL_RULES.md routing matrix.
-- Known private identifiers and common secret patterns checked in skill instructions and shared policy files.
-- Python unit tests: 4 tests passed.
-- GitHub Actions validation and unit-test job: PASS.
+| Check | Status | Evidence |
+|---|---|---|
+| Skill inventory | PASS | 45 `SKILL.md` files in the branch tree |
+| Canonical context template | PASS | `AI_CONTEXT.md` present |
+| Duplicate context file | PASS | `PROJECT_CONFIG.md` absent |
+| PHP config artifact | PASS | No `config.php` file in the branch tree |
+| Stale context filename references | PASS | No `PROJECT_CONFIG` or `config.php` references in active branch paths |
+| Skill frontmatter, names, links, catalogue, routing, privacy checks | PASS | GitHub Actions run 45596881664 |
+| Validator unit tests | PASS | GitHub Actions run 45596881664 |
+| Cross-client runtime activation | NOT RUN | Requires separate tests in each named AI client |
+| Hidden AI memory read/write | NOT CLAIMED | Platform-specific authorized capability required |
 
-The validator uses a small dependency-free frontmatter parser for this repository's supported subset; it is not a complete YAML parser or a general security scanner.
+## CI evidence
 
-## Repository inventory — PASS
+- Workflow: [Validate Agent Skills Library](https://github.com/shreeramcomputers/Universal-AI-Agent-Skills-Library/actions/runs/45596881664)
+- Result: PASS
+- Both static validation and unit-test steps completed successfully.
 
-- Skills: 44.
-- Machine-readable catalog entries: 44.
-- Shared files: GLOBAL_RULES.md, SKILL_RULES.md, PROJECT_CONFIG.md.
-- License files: CC BY 4.0 for skills/documentation; MIT for scripts/tests/workflows.
-- Installer and validator scripts present.
-- CI and release workflows present.
-- Four duplicate skill folders consolidated.
-- Historical v2.2.0 documentation retained separately.
-
-## Privacy check — limited PASS
-
-The static pattern scan found no match for the configured private owner/business identifiers or common credential patterns in the skill instructions and shared policy files.
-
-Limitations:
-- This is not a full legal/privacy audit.
-- The scan does not prove that every possible personal detail or secret has been detected.
-- It does not scan the original private repository's history, private memory records, databases, issue discussions, or local files.
-- No source history from the private SRC memory repository was copied into this public library.
-- The source repository's visibility was rechecked as Private.
-
-## Not tested / not claimed
-
-- Runtime activation and behavior across Claude, Codex, Cursor, Copilot, Gemini, and other AI clients: **NOT RUN**.
-- Installer end-to-end smoke test on multiple operating systems/agent clients: **NOT RUN**. The installer is included and code-reviewed, but client-specific path behavior still needs verification.
-- Release workflow execution by publishing a v3.0.0 tag: **NOT RUN**.
-- Independent legal review of the dual-license arrangement: **NOT PERFORMED**.
-
-Do not interpret static validation as proof of safe behavior in every AI client. Follow INSTALLATION.md and verify the target agent's discovery and shared-file loading behavior.
+## Limitations
+Static validation proves repository structure and the checks implemented by the validator. It does not prove identical skill activation, automatic shared-file loading, tool availability, or behavior across ChatGPT, Claude, Gemini, Codex, IDE agents, or other clients. Test each target client independently.

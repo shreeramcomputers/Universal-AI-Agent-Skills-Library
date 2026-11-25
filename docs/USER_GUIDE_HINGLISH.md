@@ -6,7 +6,7 @@ Ye alag-alag AI agents ke liye reusable Skills ka collection hai. Skill ek instr
 ## Shuru kaise karein?
 1. [CATALOG.json](../CATALOG.json) aur [Skills Directory](../skills/README.md) dekhein.
 2. Apne kaam ke liye sirf zaroori Skills chunein.
-3. Chuni hui Skill ki poori `SKILL.md` padhein. Saath mein [GLOBAL_RULES.md](../GLOBAL_RULES.md), [SKILL_RULES.md](../SKILL_RULES.md) ke relevant rules aur apne project ki sahi configuration load karein.
+3. Chuni hui Skill ki poori `SKILL.md` padhein. Saath mein [GLOBAL_RULES.md](../GLOBAL_RULES.md), [SKILL_RULES.md](../SKILL_RULES.md) ke relevant rules aur user ka `AI_CONTEXT.md` ho to use load karein. Agar file nahi hai, to available jankari se kaam jaari rakhein; zaroori detail missing ho to ek baar mein ek sawal poochhein.
 4. Apne AI client ke hisaab se [INSTALLATION.md](../INSTALLATION.md) follow karein.
 5. Real kaam se pehle ek safe example par test karein.
 

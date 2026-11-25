@@ -16,7 +16,7 @@ PRIVATE_PATTERNS = [
     re.compile(r"\bgh[pousr]_[A-Za-z0-9]{30,}\b"),
     re.compile(r"\bAKIA[0-9A-Z]{16}\b"),
 ]
-REQUIRED_SHARED = ("GLOBAL_RULES.md", "SKILL_RULES.md", "PROJECT_CONFIG.md")
+REQUIRED_SHARED = ("GLOBAL_RULES.md", "SKILL_RULES.md", "AI_CONTEXT.md")
 
 def parse_frontmatter(text):
     lines = text.splitlines()
@@ -62,6 +62,8 @@ def validate_skill(skill_file, root):
         errors.append("description exceeds 1024 characters")
     if values.get("license") != "CC-BY-4.0":
         errors.append("license must be CC-BY-4.0")
+    if "Mandatory interaction contract" not in body:
+        errors.append("missing mandatory interaction contract")
     if not body.strip():
         errors.append("instruction body is empty")
     if len(text.splitlines()) > 500:

@@ -27,7 +27,7 @@ Use scripts/install_skill.py to install selected folders together with the three
 
 - Review GLOBAL_RULES.md v3.0.0.
 - Review the expanded SKILL_RULES.md routing matrix.
-- Reconfirm PROJECT_CONFIG.md values for each project; do not transfer private settings from another project.
+- Reconfirm AI_CONTEXT.md values for each project; do not transfer private settings from another project.
 - The website architecture rule remains mandatory: unified UI/UX, reusable common layout/components, separate CSS/JS, frontend/backend separation, responsiveness, and private files outside the actual document root wherever supported.
 
 ### License change
