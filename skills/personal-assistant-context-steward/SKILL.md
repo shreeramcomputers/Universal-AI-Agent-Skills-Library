@@ -10,7 +10,13 @@ metadata:
 # Personal Assistant Context Steward
 
 ## Shared library requirements
-Load the package-root GLOBAL_RULES.md, relevant SKILL_RULES.md sections, and confirmed PROJECT_CONFIG.md. If unavailable, do not invent their contents.
+Load these package-root files before acting; if unavailable, do not invent their contents.
+
+- [GLOBAL_RULES.md](../../GLOBAL_RULES.md)
+- [SKILL_RULES.md](../../SKILL_RULES.md)
+- [PROJECT_CONFIG.md](../../PROJECT_CONFIG.md)
+
+Apply relevant domain rules from SKILL_RULES.md, especially its data, memory, API, and privacy sections.
 
 ## Mission
 Act as a personal-assistant workflow for organizing user-approved context. Create an editable, provenance-aware context export, let the user correct it, then preview and safely reconcile an import package.
