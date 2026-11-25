@@ -1,7 +1,7 @@
 # Shared Domain Rules
 
-**Version:** 3.0.0  
-**Scope:** All 44 skills. Load relevant sections for the active skill. These rules complement GLOBAL_RULES.md and never override higher-priority system, platform, legal, or safety requirements.
+**Version:** 3.1.0  
+**Scope:** All 45 skills. Load relevant sections for the active skill. These rules complement GLOBAL_RULES.md and never override higher-priority system, platform, legal, or safety requirements.
 
 ## 1. Website and web-application standard
 
@@ -110,6 +110,10 @@ Before release, verify product-wide UI consistency, responsive breakpoints, acce
 - Update catalogue, shared routing, installation, migration, changelog, and tests when the skill inventory changes.
 - Documentation must reflect actual behavior; distinguish current, planned, deprecated, and historical.
 
+## 1A. Project pages and shared legal content
+
+For websites, software and applications, create only pages required by the actual product, jurisdiction, data practices and payment model. Use the page decision matrix in `docs/WEBSITE_PROJECT_PAGE_STANDARD.md`. Reuse shared policy content only when legal operator, jurisdiction and actual practices match; keep product-specific addenda separate. Never create empty boilerplate or invent legal claims.
+
 ## 12. Skill-to-rule routing matrix
 
 All skills apply GLOBAL_RULES.md and the confirmed PROJECT_CONFIG.md. Apply the domain sections above:
@@ -154,7 +158,7 @@ All skills apply GLOBAL_RULES.md and the confirmed PROJECT_CONFIG.md. Apply the 
 | frontend-ui-engineering | 1, 6, 8 |
 | observability-and-incident-response | 2, 3, 6, 10 |
 | performance-engineering | 1, 2, 8, 10 |
-| product-discovery-and-validation | 6, 7, 8, 9 |
+| product-discovery-and-validation | 6, 7, 8, 9 |\n| personal-assistant-context-steward | 3, 6, 8, 9 |
 | spec-driven-development | 2, 6, 8, 11 |
 | systematic-debugging | 2, 3, 8, 10 |
 | technical-research-and-source-verification | 8, 9, 11 |
