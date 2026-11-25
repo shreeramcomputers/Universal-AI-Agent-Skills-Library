@@ -3,14 +3,24 @@
 **A practical, open collection of portable Agent Skills for real work.**
 
 [![Agent Skills format](https://img.shields.io/badge/format-Agent%20Skills-blue)](https://agentskills.io/)
-[![Skills](https://img.shields.io/badge/skills-44-brightgreen)](skills/)
+[![Skills](https://img.shields.io/badge/skills-45-brightgreen)](skills/)
 [![Validation](https://github.com/shreeramcomputers/Universal-AI-Agent-Skills-Library/actions/workflows/validate-skills.yml/badge.svg)](https://github.com/shreeramcomputers/Universal-AI-Agent-Skills-Library/actions/workflows/validate-skills.yml)
 [![MIT code](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 [![CC BY 4.0 content](https://img.shields.io/badge/skill%20content-CC%20BY%204.0-blue)](LICENSE-CONTENT.md)
 
-A vendor-neutral library of **44 reusable AI agent skills** for individuals, developers, teams, agencies, and organizations. It covers software engineering, web development, security, data, finance, product discovery, research, operations, and content workflows.
+A vendor-neutral library of **45 reusable AI agent skills** for individuals, developers, teams, agencies, and organizations. It covers software engineering, web development, security, data, finance, product discovery, research, operations, and content workflows.
 
 The library uses the open [Agent Skills format](https://agentskills.io/): each skill is a folder containing a `SKILL.md` with YAML frontmatter and clear task instructions. Skills are modular; use only the ones relevant to the job.
+
+## Documentation in English and Hinglish
+
+- [English user guide](docs/USER_GUIDE_EN.md)
+- [Hinglish user guide](docs/USER_GUIDE_HINGLISH.md)
+- [English guide for all 45 Skills](docs/ALL_SKILLS_GUIDE_EN.md)
+- [Hinglish guide for all 45 Skills](docs/ALL_SKILLS_GUIDE_HINGLISH.md)
+- [Connect an AI agent directly to this GitHub repository](docs/AI_REPOSITORY_CONNECTION.md)
+- [Personal Assistant context export, review and import](docs/PERSONAL_ASSISTANT_DATA_WORKFLOW.md)
+- [Website/software legal and project page standard](docs/WEBSITE_PROJECT_PAGE_STANDARD.md)
 
 ## Quick start
 
@@ -51,7 +61,7 @@ npx skills add shreeramcomputers/Universal-AI-Agent-Skills-Library \
 
 ## What is included
 
-- **44 skills** with focused triggers, workflows, guardrails, and expected outputs.
+- **45 skills** with focused triggers, workflows, guardrails, and expected outputs.
 - **Three shared rules files** used across the collection.
 - A neutral project configuration template; unfilled values are unknown, not defaults.
 - Installation and migration guidance.
@@ -167,4 +177,4 @@ Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CON
 
 ## Project status
 
-Version 3.0.0 is a major consolidation and expansion. Static validation is automated. Cross-platform runtime activation is not claimed unless explicitly tested and documented.
+Version 3.0.0 is the last stable baseline. The v3.1.0 documentation and context-steward upgrade is under review on a separate branch; see the pull request and validation evidence before using it as a release. Static validation is automated. Cross-platform runtime activation is not claimed unless explicitly tested and documented.
