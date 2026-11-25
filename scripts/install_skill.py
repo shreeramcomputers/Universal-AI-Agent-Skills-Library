@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse, shutil, sys
 from pathlib import Path
 
-SHARED = ("GLOBAL_RULES.md", "SKILL_RULES.md", "PROJECT_CONFIG.md")
+SHARED = ("GLOBAL_RULES.md", "SKILL_RULES.md", "AI_CONTEXT.md")
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
