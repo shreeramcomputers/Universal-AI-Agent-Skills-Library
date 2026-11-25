@@ -48,7 +48,7 @@ python3 Universal-AI-Agent-Skills-Library/scripts/install_skill.py \
   --all --destination .agents/skills
 ```
 
-The installer copies the selected skill folders and places `GLOBAL_RULES.md`, `SKILL_RULES.md`, and `AI_CONTEXT.md` at the correct shared location. It refuses to overwrite existing files unless `--force` is provided. Review existing files before using that option.
+The installer copies the selected skill folders and places `GLOBAL_RULES.md`, `SKILL_RULES.md`, and the blank `AI_CONTEXT.md` template at the correct shared location. It refuses to overwrite existing files unless `--force` is provided. Review existing files before using that option.
 
 ### Install using a Skills-compatible CLI
 
@@ -62,8 +62,8 @@ npx skills add shreeramcomputers/Universal-AI-Agent-Skills-Library \
 ## What is included
 
 - **45 skills** with focused triggers, workflows, guardrails, and expected outputs.
-- **Three shared rules files** used across the collection.
-- A neutral project configuration template; unfilled values are unknown, not defaults.
+- **Three shared support files** used across the collection: global rules, domain rules, and the blank `AI_CONTEXT.md` template.
+- A user-owned context template; completed copies must stay in a private location, not in this public repository.
 - Installation and migration guidance.
 - A zero-dependency Python validator and unit tests.
 - GitHub Actions validation on pull requests and pushes.

@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Corrected the v4.0.0 roadmap and catalogue so the published documentation consistently describes all 45 skills and the canonical `AI_CONTEXT.md` template.
+- Updated the Personal Assistant Context Steward with an explicit, privacy-safe end-of-task context gap check.
+
 ## 4.0.0 — 2026-11-25
 
 - Made a strict no-assumption, evidence-first, one-question-per-turn clarification protocol mandatory across all 45 Skills.

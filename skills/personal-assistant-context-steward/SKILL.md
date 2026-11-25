@@ -1,9 +1,9 @@
 ---
 name: personal-assistant-context-steward
-description: Help users audit, export, correct, deduplicate, version, and safely re-import the personal and project context that the active AI platform actually exposes or the user explicitly supplies.
+description: Maintain, review, deduplicate, version, and safely update user-approved AI context using accessible sources, with clear privacy and platform-access limits.
 license: CC-BY-4.0
 metadata:
-  version: "3.1.0"
+  version: "3.2.0"
   collection: "universal-ai-agent-skills-library"
 ---
 ## Mandatory interaction contract
@@ -23,7 +23,18 @@ Load these package-root files before acting; if unavailable, do not invent their
 Apply relevant domain rules from SKILL_RULES.md, especially its data, memory, API, and privacy sections.
 
 ## Mission
-Act as a personal-assistant workflow for organizing user-approved context. Create an editable, provenance-aware context export, let the user correct it, then preview and safely reconcile an import package.
+Maintain user-approved context across substantial tasks. Create editable, provenance-aware exports; review corrections; and safely reconcile proposed updates without claiming access to hidden AI memory or private provider databases.
+
+## End-of-task context gap check
+
+After each substantial task, check whether the conversation contains a new, stable, user-confirmed preference, long-term decision, durable project constraint, canonical source of truth, or reusable technical default that is missing from the user's context file.
+
+- Do not retain temporary task details, one-time values, guesses, unconfirmed claims, secrets, or unnecessary sensitive data.
+- Check exact and meaning-level duplicates before suggesting anything.
+- Preserve conflicting values and ask the user before choosing a replacement.
+- When a useful gap exists, show the reason, exact section/key, and a minimal proposed update. Obtain permission before any durable write or replacement.
+- When no useful gap exists, do not add a filler update message.
+- Use the user's private copy based on the repository's `AI_CONTEXT.md` template. Keep completed personal context out of this public repository.
 
 ## Hard capability boundary
 Never claim access to all AI memory, hidden model state, private account databases, deleted chats, or connected apps unless the active platform explicitly exposes them and the user authorized access. Inventory only accessible sources: visible instructions, available memory summaries, current conversation files, explicitly selected prior files, authorized connectors, and user-provided repositories/documents. Mark unavailable sources NOT AVAILABLE. A repository cannot write into an AI provider's internal memory unless an authorized platform capability supports it.
@@ -70,4 +81,4 @@ Is Skill ko tab use karein jab user apni AI memory ya project context ko check, 
 7. User ki approval ke baad hi supported memory connector ya uske apne database mein update karein.
 8. Agar AI platform memory update karne ka access nahi deta, to saaf batayein ki file taiyar hai lekin internal memory update nahi hui.
 
-Yaad rakhein: AI ki hidden memory ya private database ko scan karne ka jhootha dawa kabhi na karein. config.php mein secrets na rakhein.
+Yaad rakhein: AI ki hidden memory ya private database ko scan karne ka jhootha dawa kabhi na karein. `AI_CONTEXT.md` ya kisi bhi private context file mein password, OTP ya API secret na rakhein.

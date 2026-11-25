@@ -192,7 +192,7 @@
       "name": "personal-assistant-context-steward",
       "title": "Personal Assistant Context Steward",
       "category": "knowledge-management",
-      "description": "Export, review, correct, deduplicate, version, and safely re-import only user context exposed by the active AI platform or explicitly supplied by the user.",
+      "description": "Maintain, review, deduplicate, version, and safely update user-approved AI context using accessible sources, with clear privacy and platform-access limits.",
       "path": "skills/personal-assistant-context-steward/SKILL.md"
     },
     {
@@ -329,11 +329,11 @@
     },
     {
       "name": "SKILL_RULES.md",
-      "purpose": "Domain rules and a routing matrix for all 44 skills, including the website UI/UX and sensitive-file standard."
+      "purpose": "Domain rules and the routing matrix for all 45 skills."
     },
     {
       "name": "AI_CONTEXT.md",
-      "purpose": "Neutral project settings template; unfilled values remain unknown and do not grant approvals."
+      "purpose": "Blank user-owned context template; completed copies belong in a private location, not this public repository."
     },
     {
       "name": "docs/PERSONAL_ASSISTANT_DATA_WORKFLOW.md",
