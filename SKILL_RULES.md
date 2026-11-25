@@ -1,6 +1,6 @@
 # Shared Domain Rules
 
-**Version:** 3.1.0  
+**Version:** 4.0.0  
 **Scope:** All 45 skills. Load relevant sections for the active skill. These rules complement GLOBAL_RULES.md and never override higher-priority system, platform, legal, or safety requirements.
 
 ## Mandatory request-handling protocol (all skills)
