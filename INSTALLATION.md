@@ -47,7 +47,7 @@ npx skills add shreeramcomputers/Universal-AI-Agent-Skills-Library --list
 npx skills add shreeramcomputers/Universal-AI-Agent-Skills-Library --skill frontend-ui-engineering
 ```
 
-Some CLI installations copy only the selected skill folder. If root shared files were not installed, copy GLOBAL_RULES.md, SKILL_RULES.md, and PROJECT_CONFIG.md to the location expected by the skill links, or use the bundled installer.
+Some CLI installations copy only the selected skill folder. If root shared files were not installed, copy GLOBAL_RULES.md, SKILL_RULES.md, and AI_CONTEXT.md to the location expected by the skill links, or use the bundled installer.
 
 ## Manual installation
 
