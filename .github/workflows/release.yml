@@ -48,7 +48,8 @@ jobs:
           included = [
               "skills", "GLOBAL_RULES.md", "SKILL_RULES.md", "PROJECT_CONFIG.md",
               "CATALOG.json", "LICENSE", "LICENSE-CONTENT.md", "INSTALLATION.md",
-              "MIGRATION.md", "README.md", "CHANGELOG.md"
+              "MIGRATION.md", "README.md", "CHANGELOG.md", "scripts/install_skill.py",
+              "scripts/validate_skills.py"
           ]
           zip_path = Path("dist") / f"Universal-AI-Agent-Skills-Library-{version}.zip"
           tar_path = Path("dist") / f"Universal-AI-Agent-Skills-Library-{version}.tar.gz"
