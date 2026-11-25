@@ -1,7 +1,8 @@
 # Validation Report — v4.0.0
 
 **Date:** 2026-11-25  
-**Branch:** `upgrade/v4.0.0-core-behavior-context`  
+**Branch:** `main`  
+**Merge commit:** `3fce1d8d30007504a93bc210fa7c5e7af2a1f960`  
 **Pull request:** [#3](https://github.com/shreeramcomputers/Universal-AI-Agent-Skills-Library/pull/3)
 
 ## Scope
