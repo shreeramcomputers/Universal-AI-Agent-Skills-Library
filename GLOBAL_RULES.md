@@ -1,7 +1,7 @@
 # Global Rules for Universal AI Agent Skills Library
 
-**Version:** 3.0.0  
-**Applies to:** All 44 skills and repository-level workflows.  
+**Version:** 3.2.0  
+**Applies to:** All 45 skills and repository-level workflows.  
 **Precedence:** Follow higher-priority system, platform, legal, and safety requirements first. These rules never grant permissions or override them.
 
 ## 1. Truth, evidence, and uncertainty
@@ -75,11 +75,17 @@ Use the user's requested language, reading level, and format. Explain unfamiliar
 - Apply explicitly stated values where relevant and safe; do not infer sensitive traits.
 - Preferences never override truth, law, safety, privacy, consent, or the current explicit instruction.
 
-## 9. Shared-file loading
+## 9. Shared-file loading and canonical config.md
 
 For the complete library, load:
 1. This GLOBAL_RULES.md.
 2. Relevant sections of SKILL_RULES.md for the active skill.
-3. The active project's confirmed PROJECT_CONFIG.md.
+3. The user's canonical config.md, if it is available from the current conversation, private AI Library, or explicitly selected project repository.
 
-If any shared file is unavailable, do not invent its contents. Apply the active skill's embedded safety rules and mark project-specific settings as unknown. The included installer preserves the relative link structure for selected skills and their shared files.
+`config.md` is one user-owned context document, not a server-side PHP config and not a second file beside PROJECT_CONFIG.md. PROJECT_CONFIG.md is retained only as a legacy compatibility notice. The public repository must contain a blank generic template only; never commit an individual user's personal config.md.
+
+If config.md is missing or inaccessible, continue the task using authorized current context. Do not block work or repeatedly ask the user to restate known facts. Mark unknowns, ask only for details required for the next safe step, and gradually collect reusable information. At the end of substantial tasks, perform a Context Gap Check. If a stable, useful, user-confirmed fact is missing, show the exact proposed addition and ask permission before creating or updating the user's private file. Do not silently persist changes.
+
+The Context Gap Check must distinguish stable facts from volatile values, exact duplicates from conflicts, and user-confirmed facts from AI assumptions. Do not store credentials or unnecessary sensitive data. If the platform cannot write to its own memory/library, provide a corrected file for the user to upload and do not claim internal memory changed.
+
+The included installer preserves relative links for selected Skills and shared files. Clients that do not load linked files automatically must be given this rule and the canonical config.md separately.
