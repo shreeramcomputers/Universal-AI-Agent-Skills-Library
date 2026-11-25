@@ -1,17 +1,23 @@
-# License for skill and documentation content
+# License Scope and Third-Party Material
 
-The following material is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license:
+This file explains how the repository's two licenses are divided.
 
-- All files under `skills/**`, including each `SKILL.md`.
-- Markdown documentation, shared rules, catalogue data, and other explanatory text in this repository, except where a file states a different license.
+## Skills and documentation — CC BY 4.0
 
-You may share and adapt this material, including commercially, provided you give appropriate credit, link to the license, and indicate whether changes were made. Do not imply endorsement by the original contributors.
+The root [LICENSE](LICENSE) applies to the skills, documentation, catalogue, shared rules, examples, and other written content in this repository unless a file states otherwise.
+
+You may share and adapt that material, including commercially, provided you give appropriate credit, link to the license, and indicate whether changes were made. Do not imply endorsement by the contributors.
 
 Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
 
-The following software/code is instead licensed under the MIT License in [LICENSE](LICENSE):
+## Software and automation code — MIT
 
+The [LICENSE-CODE](LICENSE-CODE) applies to:
 - Files under `scripts/**` and `tests/**`.
 - GitHub Actions workflow code and repository automation configuration.
 
-If a file includes a more specific license notice, follow that notice for the file. Third-party names, trademarks, logos, and linked resources remain subject to their respective owners' terms. Public availability alone is not a substitute for the applicable license.
+The MIT copyright and permission notice must be preserved in copies or substantial portions of that code.
+
+## Third-party material
+
+Third-party names, trademarks, logos, linked resources, and contributions explicitly marked with another license remain subject to their respective owners' terms. Check each upstream license before reusing content. Public availability alone is not a license.
