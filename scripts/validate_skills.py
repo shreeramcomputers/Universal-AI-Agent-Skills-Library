@@ -62,7 +62,9 @@ def validate_skill(skill_file, root):
         errors.append("description exceeds 1024 characters")
     if values.get("license") != "CC-BY-4.0":
         errors.append("license must be CC-BY-4.0")
-    if "Mandatory interaction contract" not in body:\n        errors.append("missing mandatory interaction contract")\n    if not body.strip():
+    if "Mandatory interaction contract" not in body:
+        errors.append("missing mandatory interaction contract")
+    if not body.strip():
         errors.append("instruction body is empty")
     if len(text.splitlines()) > 500:
         errors.append("SKILL.md exceeds 500 lines")
