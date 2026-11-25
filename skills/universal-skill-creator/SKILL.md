@@ -53,7 +53,7 @@ Before writing, establish:
 
 For a public/general skill, remove personal names, private project references, personal preferences, private paths, fixed endpoints, account identifiers, and unapproved defaults. Replace them with explicit configuration steps. Retain a provider-, language-, or jurisdiction-specific focus only when it is the actual subject of the skill, and label that scope clearly.
 
-Use already provided information. Ask only one essential clarification when missing details materially change the design. Otherwise make a safe, clearly labelled assumption and continue.
+Use already provided and authorized information. Never assume missing user-specific details. If an essential detail is missing, ask one question per turn and wait; if it is non-blocking, continue only with independent work and label the gap.
 
 ## 2. Scope the skill
 
