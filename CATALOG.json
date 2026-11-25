@@ -1,10 +1,10 @@
 {
   "library": "Universal AI Agent Skills Library",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "created": "2026-11-25",
   "format": "Agent Skills specification; portable instruction folders",
   "audience": "individuals, developers, teams, agencies, and organizations",
-  "skill_count": 44,
+  "skill_count": 45,
   "skills": [
     {
       "name": "accessibility-engineering",
@@ -189,6 +189,13 @@
       "path": "skills/performance-engineering/SKILL.md"
     },
     {
+      "name": "personal-assistant-context-steward",
+      "title": "Personal Assistant Context Steward",
+      "category": "knowledge-management",
+      "description": "Export, review, correct, deduplicate, version, and safely re-import only user context exposed by the active AI platform or explicitly supplied by the user.",
+      "path": "skills/personal-assistant-context-steward/SKILL.md"
+    },
+    {
       "name": "php-shared-hosting-engineering",
       "title": "PHP Shared Hosting Engineering",
       "category": "web-development",
@@ -327,6 +334,10 @@
     {
       "name": "PROJECT_CONFIG.md",
       "purpose": "Neutral project settings template; unfilled values remain unknown and do not grant approvals."
+    },
+    {
+      "name": "docs/PERSONAL_ASSISTANT_DATA_WORKFLOW.md",
+      "purpose": "Transparent, permission-aware context export, review, deduplication, and import workflow."
     }
   ],
   "installation": {
