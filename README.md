@@ -159,7 +159,7 @@ These are independent projects. This library does not claim affiliation or endor
 
 - Skill files and documentation: **CC BY 4.0**. Attribution and change-notice conditions apply.
 - Scripts, tests, and workflow code: **MIT**.
-- See [LICENSE](LICENSE) and [LICENSE-CONTENT.md](LICENSE-CONTENT.md) for exact scope. Check third-party asset licenses separately.
+- See [LICENSE](LICENSE), [LICENSE-CODE](LICENSE-CODE), and [LICENSE-CONTENT.md](LICENSE-CONTENT.md) for exact scope. Check third-party asset licenses separately.
 
 ## Contributing
 

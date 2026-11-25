@@ -47,7 +47,7 @@ jobs:
           root = Path(".")
           included = [
               "skills", "GLOBAL_RULES.md", "SKILL_RULES.md", "PROJECT_CONFIG.md",
-              "CATALOG.json", "LICENSE", "LICENSE-CONTENT.md", "INSTALLATION.md",
+              "CATALOG.json", "LICENSE", "LICENSE-CODE", "LICENSE-CONTENT.md", "INSTALLATION.md",
               "MIGRATION.md", "README.md", "CHANGELOG.md", "scripts/install_skill.py",
               "scripts/validate_skills.py"
           ]
