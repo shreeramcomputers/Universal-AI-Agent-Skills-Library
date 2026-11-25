@@ -46,7 +46,7 @@ jobs:
           version = sys.argv[1]
           root = Path(".")
           included = [
-              "skills", "GLOBAL_RULES.md", "SKILL_RULES.md", "PROJECT_CONFIG.md",
+              "skills", "GLOBAL_RULES.md", "SKILL_RULES.md", "AI_CONTEXT.md",
               "CATALOG.json", "LICENSE", "LICENSE-CODE", "LICENSE-CONTENT.md", "INSTALLATION.md",
               "MIGRATION.md", "README.md", "CHANGELOG.md", "scripts/install_skill.py",
               "scripts/validate_skills.py"
