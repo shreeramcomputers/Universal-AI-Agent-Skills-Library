@@ -2,22 +2,29 @@
 
 This roadmap describes potential priorities, not promises or scheduled delivery.
 
-## Current release — 3.0.0
-- 44 focused, portable skills.
-- Shared global, domain, and project-configuration rules.
-- Bundled installer, validator, tests, and GitHub Actions validation.
-- Contribution, security, support, licensing, and migration documentation.
+## Current release — 4.0.0
+
+- 45 focused, portable Agent Skills.
+- Mandatory evidence-first, no-assumption, one-question-per-turn interaction contract across all 45 Skills.
+- One canonical blank context template: `AI_CONTEXT.md`; completed user context stays private.
+- Shared global/domain rules, installer, validator, unit tests, and GitHub Actions CI.
+- Bilingual user guides, contribution/security/licensing documents, and release-packaging workflow.
+
+**Release status:** v4.0.0 changes are merged into `main` and the latest main-branch validation workflow passed. The Git tag and published GitHub Release are still pending; creating tag `v4.0.0` will trigger the release workflow.
 
 ## Next priorities
-1. Validate selected skills in multiple Agent Skills-compatible clients and record exact client/version/results.
-2. Add focused reference files only where a skill's core instructions would otherwise become long or difficult to maintain.
-3. Add structured examples and small, deterministic fixtures for high-value skills.
-4. Add evaluation cases that test correct activation, refusal boundaries, evidence quality, and completion claims.
+
+1. Run controlled activation and behavior tests in named Agent Skills-compatible clients; record exact client, version, date, test cases, and results.
+2. Add a small deterministic evaluation suite for activation, clarification, refusal boundaries, evidence quality, privacy, and completion claims.
+3. Add structured examples and fixtures only for high-value skills where they improve repeatability.
+4. Add focused reference files only where the main `SKILL.md` would otherwise become difficult to maintain.
 5. Improve translations only when maintainers can review technical accuracy.
-6. Add release packaging and changelog automation after reproducible build and license checks are established.
+6. Strengthen release provenance and reproducibility checks, then record artifact hashes and validation evidence for each published release.
 
 ## Quality principles
+
 - Prefer correctness, usefulness, safety, and maintainability over skill count.
 - Add a new skill only for a distinct recurring workflow.
 - Retire or merge overlap rather than keeping duplicate folders.
 - Never claim cross-platform compatibility without testing.
+- Keep public templates generic; never commit a user's private context file.
