@@ -1,0 +1,242 @@
+{
+  "library": "Universal AI Agent Skills Library",
+  "version": "2.2.0",
+  "created": "2026-11-25",
+  "format": "instruction-only portable Agent Skills",
+  "audience": "general public, individuals, teams, agencies, and organizations",
+  "skill_count": 31,
+  "skills": [
+    {
+      "name": "memory-governance-and-source-control",
+      "title": "Memory Governance and Source Control",
+      "category": "knowledge-management",
+      "description": "Organize project knowledge, memories, documents, decisions, and source conflicts for individuals or teams. Use when an AI agent must retrieve, update, verify, or hand over project context.",
+      "path": "skills/memory-governance-and-source-control/SKILL.md"
+    },
+    {
+      "name": "php-shared-hosting-engineering",
+      "title": "PHP Shared Hosting Engineering",
+      "category": "software-engineering",
+      "description": "Build, audit, secure, and optimize PHP applications on shared or restricted hosting without assuming root access or a specific hosting provider.",
+      "path": "skills/php-shared-hosting-engineering/SKILL.md"
+    },
+    {
+      "name": "secure-rest-api-engineering",
+      "title": "Secure REST API Engineering",
+      "category": "software-engineering",
+      "description": "Design, implement, test, and review secure REST/JSON APIs with clear contracts, authentication, authorization, abuse controls, and reliable error handling.",
+      "path": "skills/secure-rest-api-engineering/SKILL.md"
+    },
+    {
+      "name": "mariadb-database-engineering",
+      "title": "MariaDB and MySQL Database Engineering",
+      "category": "data-engineering",
+      "description": "Design, inspect, migrate, optimize, and validate MariaDB/MySQL schemas, queries, transactions, and data workflows.",
+      "path": "skills/mariadb-database-engineering/SKILL.md"
+    },
+    {
+      "name": "payment-and-wallet-ledger-workflow",
+      "title": "Payment and Wallet Ledger Workflow",
+      "category": "payments-and-fintech",
+      "description": "Design and review payment, wallet, refund, cashback, settlement, and ledger workflows with reliable evidence and reconciliation.",
+      "path": "skills/payment-and-wallet-ledger-workflow/SKILL.md"
+    },
+    {
+      "name": "authentication-and-session-security",
+      "title": "Authentication and Session Security",
+      "category": "cybersecurity",
+      "description": "Design, implement, and audit account authentication, MFA, OTP, recovery, sessions, device trust, and authorization.",
+      "path": "skills/authentication-and-session-security/SKILL.md"
+    },
+    {
+      "name": "qr-code-api-engineering",
+      "title": "QR Code and Barcode API Engineering",
+      "category": "software-engineering",
+      "description": "Build, maintain, and secure QR/barcode generation and decoding APIs with format validation, resource limits, and backward compatibility.",
+      "path": "skills/qr-code-api-engineering/SKILL.md"
+    },
+    {
+      "name": "consent-based-location-sharing",
+      "title": "Consent-Based Location Sharing and GPS Security",
+      "category": "privacy-and-mobile",
+      "description": "Design and secure user-consented location sharing, GPS ingestion, session controls, map display, and location-data retention.",
+      "path": "skills/consent-based-location-sharing/SKILL.md"
+    },
+    {
+      "name": "android-extension-engineering",
+      "title": "Android Extension Engineering",
+      "category": "mobile-development",
+      "description": "Build, audit, upgrade, and maintain Android extensions/components for supported builders such as Niotron or App Inventor.",
+      "path": "skills/android-extension-engineering/SKILL.md"
+    },
+    {
+      "name": "android-platform-policy-compliance",
+      "title": "Android Platform and Policy Compliance",
+      "category": "mobile-development-and-compliance",
+      "description": "Review Android platform behavior, API compatibility, permissions, privacy, background limits, and app-store distribution requirements.",
+      "path": "skills/android-platform-policy-compliance/SKILL.md"
+    },
+    {
+      "name": "financial-data-governance",
+      "title": "Financial Data Governance",
+      "category": "finance-and-data-governance",
+      "description": "Govern financial records, credit data, statements, calculations, account matching, AI access, and consent across personal or business finance systems.",
+      "path": "skills/financial-data-governance/SKILL.md"
+    },
+    {
+      "name": "website-seo-and-local-search",
+      "title": "Website SEO and Local Search",
+      "category": "marketing-and-web",
+      "description": "Improve websites, technical SEO, local search presence, structured data, accessibility, and business listings using accurate evidence.",
+      "path": "skills/website-seo-and-local-search/SKILL.md"
+    },
+    {
+      "name": "youtube-content-and-trust-safety",
+      "title": "YouTube Content and Digital Trust",
+      "category": "content-and-media",
+      "description": "Create and audit YouTube scripts, titles, descriptions, thumbnails, tags, and educational content with factual accuracy and platform-policy awareness.",
+      "path": "skills/youtube-content-and-trust-safety/SKILL.md"
+    },
+    {
+      "name": "privacy-first-browser-tools",
+      "title": "Privacy-First Browser Tools",
+      "category": "privacy-and-web-development",
+      "description": "Design browser-based tools that minimize data collection, protect files and user input, and clearly disclose network and storage behavior.",
+      "path": "skills/privacy-first-browser-tools/SKILL.md"
+    },
+    {
+      "name": "upi-payment-integrity",
+      "title": "UPI Payment Integrity",
+      "category": "payments-and-fintech",
+      "description": "Design and review India UPI intent/QR payment journeys with secure server-side verification, idempotency, and dispute reconciliation.",
+      "path": "skills/upi-payment-integrity/SKILL.md"
+    },
+    {
+      "name": "mcp-and-api-integration",
+      "title": "MCP and API Integration",
+      "category": "ai-integration",
+      "description": "Design and integrate APIs with Model Context Protocol (MCP) servers, tools, resources, and AI clients using least privilege and safe action approval.",
+      "path": "skills/mcp-and-api-integration/SKILL.md"
+    },
+    {
+      "name": "client-website-delivery",
+      "title": "Client Website Delivery",
+      "category": "web-agency-operations",
+      "description": "Plan, build, audit, and hand over websites for multiple clients while protecting identity, data separation, approvals, and deployment integrity.",
+      "path": "skills/client-website-delivery/SKILL.md"
+    },
+    {
+      "name": "digital-service-center-operations",
+      "title": "Digital Service Center Operations",
+      "category": "business-operations",
+      "description": "Improve customer-facing digital service centers through accurate SOPs, document handling, queue management, printing, payments, and privacy controls.",
+      "path": "skills/digital-service-center-operations/SKILL.md"
+    },
+    {
+      "name": "agricultural-marketplace-planning",
+      "title": "Agricultural Marketplace Planning",
+      "category": "marketplace-planning",
+      "description": "Plan digital marketplaces that connect farmers, food producers, buyers, logistics providers, and service partners with clear roles and transaction controls.",
+      "path": "skills/agricultural-marketplace-planning/SKILL.md"
+    },
+    {
+      "name": "contract-first-project-planning",
+      "title": "Contract-First Project Planning",
+      "category": "project-management",
+      "description": "Convert complex requests into scoped, testable plans with dependencies, acceptance criteria, risks, and verified completion status.",
+      "path": "skills/contract-first-project-planning/SKILL.md"
+    },
+    {
+      "name": "universal-skill-creator",
+      "title": "Universal Skill Creator",
+      "category": "meta-skill-development",
+      "description": "Create, review, improve, validate, and package portable AI Agent Skills for individuals, teams, and organizations. Use when a workflow must become a reusable SKILL.md or an existing skill needs upgrading.",
+      "path": "skills/universal-skill-creator/SKILL.md"
+    },
+    {
+      "name": "context-builder",
+      "title": "Context Builder",
+      "category": "knowledge-management",
+      "description": "Retrieve only task-relevant project context under a defined context and privacy budget.",
+      "path": "skills/context-builder/SKILL.md"
+    },
+    {
+      "name": "github-delivery",
+      "title": "GitHub Delivery",
+      "category": "development-workflow",
+      "description": "Prepare safe Git commits, pull requests, repository documentation, CI, releases, and deployment workflows.",
+      "path": "skills/github-delivery/SKILL.md"
+    },
+    {
+      "name": "memory-governance",
+      "title": "Memory Governance",
+      "category": "knowledge-management",
+      "description": "Govern durable AI memory creation, review, approval, versioning, expiry, retrieval, and deletion.",
+      "path": "skills/memory-governance/SKILL.md"
+    },
+    {
+      "name": "php-shared-hosting",
+      "title": "PHP Shared Hosting",
+      "category": "web-development",
+      "description": "Design, audit, secure, and deploy PHP applications on shared or restricted hosting.",
+      "path": "skills/php-shared-hosting/SKILL.md"
+    },
+    {
+      "name": "project-planning",
+      "title": "Project Planning",
+      "category": "project-management",
+      "description": "Plan products and technical work in phases with scope, evidence, risk controls, and measurable acceptance criteria.",
+      "path": "skills/project-planning/SKILL.md"
+    },
+    {
+      "name": "project-reverse-engineering",
+      "title": "Project Reverse Engineering",
+      "category": "software-engineering",
+      "description": "Understand and safely improve existing software systems before changing or replacing them.",
+      "path": "skills/project-reverse-engineering/SKILL.md"
+    },
+    {
+      "name": "repository-first-memory",
+      "title": "Repository-First Project Context",
+      "category": "knowledge-management",
+      "description": "Use authorized project repositories as canonical context without leaking data across project scopes.",
+      "path": "skills/repository-first-memory/SKILL.md"
+    },
+    {
+      "name": "secure-rest-api",
+      "title": "Secure REST API",
+      "category": "api-security",
+      "description": "Design secure REST APIs with authentication, authorization, validation, abuse controls, and safe operations.",
+      "path": "skills/secure-rest-api/SKILL.md"
+    },
+    {
+      "name": "scoped-memory-governance",
+      "title": "Scoped Memory Governance",
+      "category": "knowledge-management",
+      "description": "Curate durable project memory with explicit scope, provenance, approval, versions, and privacy boundaries.",
+      "path": "skills/scoped-memory-governance/SKILL.md"
+    },
+    {
+      "name": "security-audit",
+      "title": "Security Audit",
+      "category": "cybersecurity",
+      "description": "Audit explicitly authorized software and deployments using evidence-based defensive security methods.",
+      "path": "skills/security-audit/SKILL.md"
+    }
+  ],
+  "shared_files": [
+    {
+      "name": "GLOBAL_RULES.md",
+      "purpose": "Mandatory cross-skill truth, evidence, communication, safety, privacy, engineering, and action rules."
+    },
+    {
+      "name": "SKILL_RULES.md",
+      "purpose": "Mandatory domain-specific rules for all 31 skills, including the website architecture/security standard and skill-to-rule routing matrix."
+    },
+    {
+      "name": "PROJECT_CONFIG.md",
+      "purpose": "Neutral per-user and per-project configuration template; unfilled values are unknown."
+    }
+  ],
+  "installation_note": "Install the full bundle and preserve root shared files. All 31 skills explicitly reference the three shared files. Some AI clients require explicit loading or a supported references directory; Markdown links do not guarantee automatic loading."
+}
