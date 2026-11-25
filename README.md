@@ -177,4 +177,4 @@ Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CON
 
 ## Project status
 
-Version 4.0.0 is being prepared on a review branch. See the pull request and CI evidence before treating it as a release. Static validation is automated. Cross-platform runtime activation is not claimed unless explicitly tested and documented.
+Version 4.0.0 has been merged into `main`. The repository changes are merged and CI validation passed; a version tag/GitHub release and cross-client runtime certification are separate steps and have not been claimed. Static validation is automated. Cross-platform runtime activation is not claimed unless explicitly tested and documented.
